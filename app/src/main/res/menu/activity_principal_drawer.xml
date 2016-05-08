@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_inicio"
+            android:title="Inicio" />
+        <item
+            android:id="@+id/nav_noticias"
+            android:title="Noticias" />
+        <item
+            android:id="@+id/nav_representante"
+            android:title="¿Quién es mi representante?" />
+        <item
+            android:id="@+id/nav_comisiones"
+            android:title="Comisiones" />
+
+        <item android:id="@+id/nav_contacto"
+            android:title="Contáctanos" />
+
+    </group>
+
+    <item android:title="Acerca De">
+        <menu>
+            <item
+                android:id="@+id/nav_info"
+                android:title="¿Quiénes somos?"
+                android:icon="@drawable/ic_menu_gallery"/>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Compartir" />
+        </menu>
+    </item>
+
+</menu>

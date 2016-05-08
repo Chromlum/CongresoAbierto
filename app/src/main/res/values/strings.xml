@@ -1,0 +1,90 @@
+<resources>
+    <string name="app_name">CongresoAbierto</string>
+    <string name="title_activity_principal">Principal</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="enviar">Enviar</string>
+    <string name="bienvenida" translatable="true">¡Bienvenido a Congreso Abierto!</string>
+    <string name="mensaje" translatable="true">Mensaje</string>
+    <string name="asunto" translatable="true">Asunto: </string>
+    <string name="inicio" translatable="true">Inicio</string>
+    <string name="representante" translatable="true">¿Quién es mi representante?</string>
+    <string name="comisiones" translatable="true">Comisiones</string>
+    <string name="tuvoz" translatable="true">Noticias</string>
+    <string name="feed" translatable="true">Twitter Feed</string>
+    <string name="contacto" translatable="true">Contáctanos</string>
+    <string name="representante_dialog" translatable="true">Elige tu distrito</string>
+    <string name="comisiones_dialog" translatable="true">Elige tu comisión</string>
+    <string name="acercaDe" translatable="true">Acerca de</string>
+
+
+    <string name="cargando" translatable="true">Cargando...</string>
+    <string name="errorcarga" translatable="true">Error al obtener los datos</string>
+
+
+    <!-- Comisiones -->
+
+    <string-array name="comisiones" translatable="true">
+        <item>Agricultura, Ganadería y Pesca</item>
+        <item>Ambiente, Ecología y Recursos Naturales</item>
+        <item>Asuntos Municipales</item>
+        <item>Comisión de Apoyo Técnico</item>
+        <item>Comisión de Probidad</item>
+        <item>Comisión de Pueblos Indígenas</item>
+        <item>Comisión de Salud y Asistencia Social</item>
+        <item>Comisión del Migrante</item>
+        <item>Comisión Extraordinaria de Asuntos Sobre Discapacidad</item>
+        <item>Comisión Extraordinaria de Cooperación Internacional y Organismos Internacionales</item>
+        <item>Comisión Extraordinaria de Estudio y Análisis del Cambio Climático.</item>
+        <item>Comisión Extraordinaria de Frontera Norte.</item>
+        <item>Comisión Extraordinaria de Frontera Sur.</item>
+        <item>Comisión Extraordinaria de Seguimiento y Apoyo a las Comisiones de Postulación</item>
+        <item>Comunicaciones, Transporte y Obras Públicas</item>
+        <item>Cooperativismo y Organizaciones No Gubernamentales</item>
+        <item>Cultura</item>
+        <item>De la Mujer</item>
+        <item>Defensa del Consumidor y el Usuario</item>
+        <item>Defensa Nacional</item>
+        <item>Del Menor y de la Familia</item>
+        <item>Deportes</item>
+        <item>Derechos Humanos</item>
+        <item>Descentralización y Desarrollo</item>
+        <item>Economía y Comercio Exterior</item>
+        <item>Educación, Ciencia y Tecnología</item>
+        <item>Energía y Minas</item>
+        <item>Específica de Asuntos de Seguridad Nacional y de Inteligencia</item>
+        <item>Específica de Asuntos Electorales</item>
+        <item>Específica para la Integración y Desarrollo de Petén</item>
+        <item>Específica para la Paz y el Desminado</item>
+        <item>Extraordinaria de Apoyo a la Recaudación Tributaria</item>
+        <item>Extraordinaria de Fiscalización de Compras del Sector Salud</item>
+        <item>Extraordinaria de la Juventud</item>
+        <item>Extraordinaria de Recursos Hídricos</item>
+        <item>Extraordinaria de Reforma al Sector Justicia</item>
+        <item>Extraordinaria de Seguimiento al Plan Visión de País</item>
+        <item>Extraordinaria del Catastro y Ordenamiento Territorial</item>
+        <item>Extraordinaria del Programa de Reconstrucción Nacional</item>
+        <item>Extraordinaria Encargada del Estudio y Análisis para la Deslegislación</item>
+        <item>Extraordinaria Nacional por la Transparencia</item>
+        <item>Finanzas Públicas y Moneda</item>
+        <item>Gobernación</item>
+        <item>Integración Regional</item>
+        <item>Legislación y Puntos Constitucionales</item>
+        <item>Pequeña y Mediana Empresa</item>
+        <item>Previsión y Seguridad Social</item>
+        <item>Relaciones Exteriores</item>
+        <item>Seguridad Alimentaria</item>
+        <item>Trabajo</item>
+        <item>Turismo</item>
+        <item>Vivienda</item>
+    </string-array>
+
+    <string name="imgdesc">Congreso Abierto</string>
+    <string name="red_ciudadana">Red Ciudadana es una organización
+        sin fines de lucro, que tiene como objetivo fomentar la participación ciudadana y
+        desarrollar soluciones a los problemas comunes de los ciudadanos por medio
+        de la tecnología.</string>
+</resources>

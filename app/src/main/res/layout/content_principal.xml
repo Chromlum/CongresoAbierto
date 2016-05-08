@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="gt.redciudadana.congresoabierto.Principal"
+    tools:showIn="@layout/app_bar_principal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.30">
+
+        <ImageView android:id="@+id/banner"
+            android:src="@drawable/banner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="top"
+            android:scaleType="fitXY"
+            android:layout_alignParentBottom="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/bannerText"
+            android:text="@string/bienvenida"
+            android:textColor="@color/blanco"
+            android:layout_marginRight="20dp"
+            android:textStyle="bold"
+            android:shadowColor="#000000"
+            android:shadowDx="0.0"
+            android:shadowDy="0.0"
+            android:shadowRadius="3.0"
+            android:gravity="center"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/fragmentoActual"
+        android:background="@color/blanco"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="gt.candidatos.app.Principal"
+        tools:showIn="@layout/app_bar_principal">
+
+
+    </FrameLayout>
+</LinearLayout>
