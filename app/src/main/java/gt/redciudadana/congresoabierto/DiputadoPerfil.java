@@ -131,7 +131,7 @@ public class DiputadoPerfil extends AppCompatActivity {
             }
         }else if (btnID == R.id.btnComi){
             try{
-                fragmentClass = ComisionesFragment.class;
+                fragmentClass = ComPerfilFragment.class;
                 fragment = (Fragment) fragmentClass.newInstance();
                 fragment.setArguments(bundle);
                 FragmentTransaction transaccion = getSupportFragmentManager().beginTransaction();
@@ -143,6 +143,15 @@ public class DiputadoPerfil extends AppCompatActivity {
             }catch (Exception e){
                 Log.v("Error Fragment", "ERROR",e);
             }
+        }else if (btnID == R.id.yt_button){
+            startActivity(new Intent(Intent.ACTION_VIEW,
+                    Uri.parse(yt)));
+        }else if (btnID == R.id.fb_button){
+            startActivity(new Intent(Intent.ACTION_VIEW,
+                    Uri.parse(fb)));
+        }else if (btnID == R.id.tw_boton){
+            startActivity(new Intent(Intent.ACTION_VIEW,
+                    Uri.parse(tw)));
         }
     }
     @Override

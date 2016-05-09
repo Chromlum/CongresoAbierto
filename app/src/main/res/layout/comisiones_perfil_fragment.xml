@@ -11,6 +11,7 @@
         android:textSize="40sp"
         android:text="@string/comisiones"
         android:gravity="center"
+        android:layout_marginTop="5dp"
         android:background="@color/mainc"
         android:layout_weight="0.01"/>
     <ListView

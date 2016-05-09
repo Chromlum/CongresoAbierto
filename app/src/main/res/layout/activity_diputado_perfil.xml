@@ -96,7 +96,7 @@
             <ImageButton
                 android:layout_width="30dp"
                 android:layout_height="30dp"
-                android:id="@+id/tw_button"
+                android:id="@+id/tw_boton"
                 android:onClick="onClick"
                 android:layout_alignBaseline="@+id/yt_button"
                 android:layout_alignBottom="@+id/yt_button"

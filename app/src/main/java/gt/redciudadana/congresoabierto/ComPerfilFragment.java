@@ -26,13 +26,13 @@ public class ComPerfilFragment extends Fragment {
         String[] comisionesArray = comi.split(",");
         ArrayAdapter<String> adaptador = null;
         ArrayList<String> comisiones = new ArrayList<>();
-        for (int i = 0; i < comisionesArray.length; i++){
+        /*for (int i = 0; i < comisionesArray.length; i++){
             comisiones.add(comisionesArray[i]);
-        }
-        /*String[] comisionesData = getResources().getStringArray(R.array.comisiones);
+        }*/
+        String[] comisionesData = getResources().getStringArray(R.array.comisiones);
         for (int i = 0; i < comisionesArray.length; i++){
             comisiones.add(comisionesData[Integer.parseInt(comisionesArray[i])]);
-        }*/
+        }
         adaptador = new ArrayAdapter<String>(getActivity(),
                 R.layout.lista_textview, R.id.lista_txt, comisiones);
         ListView lista = (ListView)rootview.findViewById(R.id.comisiones_list);
