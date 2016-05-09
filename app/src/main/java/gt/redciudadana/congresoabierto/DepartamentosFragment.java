@@ -21,7 +21,7 @@ import java.util.ArrayList;
 public class DepartamentosFragment extends Fragment {
 
     protected ArrayAdapter<String> adaptador;
-    protected QueryManager candiDatos;
+    protected QueryManager personasData;
 
 
     @Nullable
@@ -29,29 +29,12 @@ public class DepartamentosFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, final Bundle savedInstanceState) {
         View rootview = inflater.inflate(R.layout.listado_fragment, container, false);
         ArrayList<String> departamentos = new ArrayList<>();
-        candiDatos = new QueryManager(getArguments().getStringArrayList(Principal.DATA_KEY));
-        departamentos.add("Alta Verapaz");
-        departamentos.add("Baja Verapaz");
-        departamentos.add("Chimaltenango");
-        departamentos.add("Distrito Central");
-        departamentos.add("Distrito Guatemala");
-        departamentos.add("El Progreso");
-        departamentos.add("Escuintla");
-        departamentos.add("Huehuetenango");
-        departamentos.add("Izabal");
-        departamentos.add("Jalapa");
-        departamentos.add("Jutiapa");
-        departamentos.add("Petén");
-        departamentos.add("Quetzaltenango");
-        departamentos.add("Quiché");
-        departamentos.add("Retalhuleu");
-        departamentos.add("Sacatepéquez");
-        departamentos.add("San Marcos");
-        departamentos.add("Santa Rosa");
-        departamentos.add("Sololá");
-        departamentos.add("Totonicapán");
-        departamentos.add("Zacapa");
-        departamentos.add("Listado Nacional");
+        personasData = new QueryManager(getArguments().getStringArrayList(Principal.DATA_KEY));
+
+        String[] departamentosData = getResources().getStringArray(R.array.departamentos);
+        for (String comision: departamentosData) {
+            departamentos.add(comision);
+        }
         adaptador = new ArrayAdapter<String>(getActivity(),
                 R.layout.lista_textview, R.id.lista_txt, departamentos);
 
@@ -62,7 +45,7 @@ public class DepartamentosFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String query = (String) parent.getItemAtPosition(position);
-                ArrayList<String> personas = candiDatos.buscarPorDistrito(query);
+                ArrayList<String> personas = personasData.buscarPorDistrito(query);
                 TextView textView = (TextView) getActivity().findViewById(R.id.bannerText);
                 textView.setText(query);
                 Bundle bundle = new Bundle();

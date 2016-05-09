@@ -1,190 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.CoordinatorLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fitsSystemWindows="true">
-    <android.support.design.widget.AppBarLayout
-        android:id="@+id/app_bar_layout"
-        android:layout_height="192dp"
+    android:background="@color/blanco">
+
+    <LinearLayout
         android:layout_width="match_parent"
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto">
-        <android.support.design.widget.CollapsingToolbarLayout
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:background="@color/blanco">
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:contentScrim="?attr/colorPrimary"
-            app:expandedTitleMarginStart="48dp"
-            app:expandedTitleMarginEnd="64dp"
-            android:fitsSystemWindows="true"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed">
-
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="10dp">
             <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/banner"
-                android:id="@+id/perfil_img"
-                android:scaleType="centerCrop"
-                android:fitsSystemWindows="true"
-                app:layout_collapseMode="parallax" />
-            <android.support.v7.widget.Toolbar
-                android:layout_height="?attr/actionBarSize"
-                android:layout_width="match_parent"
-                app:layout_collapseMode="pin" />
-        </android.support.design.widget.CollapsingToolbarLayout>
-    </android.support.design.widget.AppBarLayout>
+                android:id="@+id/imgFotoDiputadoPerfil"
+                android:layout_width="100dp"
+                android:layout_height="120dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:contentDescription="@string/imgdesc"
+                android:scaleType="fitXY" />
 
-    <android.support.v4.widget.NestedScrollView
-        android:id="@+id/scroll"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:clipToPadding="false"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+            <TextView
+                android:id="@+id/txtNombreDiputado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="100dp"
+                android:textStyle="bold"
+                android:textSize="15dp"
+                android:layout_alignParentTop="true"
+                android:layout_toRightOf="@+id/imgFotoDiputadoPerfil"
+                android:layout_marginLeft="15dp"
+                android:text=""
+                android:textAppearance="?android:attr/textAppearanceMedium" />
 
+            <TextView
+                android:id="@+id/txtBancada"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/gray"
+                android:layout_below="@+id/txtNombreDiputado"
+                android:layout_toRightOf="@+id/imgFotoDiputadoPerfil"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="5dp"
+                android:text=""/>
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignBottom="@id/imgFotoDiputadoPerfil"
+                android:id="@+id/partidoImg"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="50dp">
+            <Button
+                android:drawableLeft="@android:drawable/ic_menu_call"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:id="@+id/boton_llamar"
+                android:background="@drawable/buttonround"
+                android:text="@string/llamar"
+                android:onClick="onClick"
+                android:textColor="@color/blanco"
+                android:textStyle="bold"/>
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/yt"
+                android:id="@+id/yt_button"
+                android:onClick="onClick"
+                android:layout_marginRight="20dp"
+                android:foregroundGravity="center"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"/>
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/fb_button"
+                android:onClick="onClick"
+                android:layout_alignBaseline="@+id/yt_button"
+                android:layout_alignBottom="@+id/yt_button"
+                android:layout_alignRight="@id/yt_button"
+                android:layout_marginRight="50dp"
+                android:background="@drawable/fb"/>
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/tw_button"
+                android:onClick="onClick"
+                android:layout_alignBaseline="@+id/yt_button"
+                android:layout_alignBottom="@+id/yt_button"
+                android:layout_alignRight="@id/yt_button"
+                android:layout_marginRight="100dp"
+                android:background="@drawable/tw"/>
+        </RelativeLayout>
         <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:gravity="center">
-
-                        <ImageButton
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:scaleType="fitXY"
-                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                            android:layout_marginRight="@dimen/activity_vertical_margin"
-                            android:layout_marginTop="5dp"
-                            android:background="@drawable/yt"/>
-                        <ImageButton
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:scaleType="fitXY"
-                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                            android:layout_marginRight="@dimen/activity_vertical_margin"
-                            android:layout_marginTop="5dp"
-                            android:background="@drawable/fb"/>
-
-                        <ImageButton
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:scaleType="fitXY"
-                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                            android:layout_marginRight="@dimen/activity_vertical_margin"
-                            android:layout_marginTop="5dp"
-                            android:background="@drawable/tw"/>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <TextView
-                            android:id="@+id/Telefono"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:drawableLeft="@android:drawable/ic_menu_call"
-                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                            android:layout_marginRight="@dimen/activity_vertical_margin"
-                            android:layout_marginTop="@dimen/activity_horizontal_margin"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                            android:text="Contacto"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/telefono_text"
-                            android:text="Numero de telefono"
-                            android:gravity="center"/>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <TextView
-                            android:id="@+id/Email"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:drawableLeft="@android:drawable/ic_menu_send"
-                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                            android:layout_marginRight="@dimen/activity_vertical_margin"
-                            android:layout_marginTop="@dimen/activity_horizontal_margin"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                            android:text="Correo"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/correo_text"
-                            android:text=""
-                            android:gravity="center"/>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <TextView
-                            android:id="@+id/Comision"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:drawableLeft="@android:drawable/ic_menu_my_calendar"
-                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                            android:layout_marginRight="@dimen/activity_vertical_margin"
-                            android:layout_marginTop="@dimen/activity_horizontal_margin"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                            android:text="Comision"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:id="@+id/comision_text"
-                            android:text="Comisión"
-                            android:gravity="center"/>
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-                        <TextView
-                            android:id="@+id/Asistencia"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:drawableLeft="@android:drawable/ic_menu_help"
-                            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                            android:layout_marginRight="@dimen/activity_vertical_margin"
-                            android:layout_marginTop="@dimen/activity_horizontal_margin"
-                            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
-                            android:text="Asistencia"/>
-                        <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text=""
-                            android:gravity="center"/>
-                    </LinearLayout>
-
-
-                </LinearLayout>
-
+            android:layout_height="wrap_content"
+            android:id="@+id/diputado_frame"
+            android:background="@color/blanco">
 
         </FrameLayout>
+    </LinearLayout>
 
-
-
-    </android.support.v4.widget.NestedScrollView>
-    <android.support.design.widget.FloatingActionButton
-        android:id="@+id/fab"
-        app:layout_anchor="@id/app_bar_layout"
-        app:layout_anchorGravity="bottom|right|end"
-        android:layout_width="wrap_content"
-        android:src="@android:drawable/sym_action_email"
-        android:layout_height="wrap_content"
-        style="@style/RtlUnderlay.Widget.AppCompat.ActionButton"/>
-</android.support.design.widget.CoordinatorLayout>
+</ScrollView>

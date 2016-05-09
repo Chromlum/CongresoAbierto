@@ -25,11 +25,7 @@
             <item
                 android:id="@+id/nav_info"
                 android:title="¿Quiénes somos?"
-                android:icon="@drawable/ic_menu_gallery"/>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Compartir" />
+                android:icon="@android:drawable/ic_menu_help"/>
         </menu>
     </item>
 

@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ListFragment;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,37 +38,41 @@ public class FeedFragment extends ListFragment {
 
         final View rootView = inflater.inflate(R.layout.fragment_feed, container, false);
 
-        final SwipeRefreshLayout swipeL = (SwipeRefreshLayout) rootView
-                .findViewById(R.id.twitter_refreshL);
-        // Codigo obtenido de la documentacion de Fabric
-        final UserTimeline noticias = new UserTimeline.Builder()
-                .screenName("RedxGuate")
-                .build();
-        final TweetTimelineListAdapter adapter = new TweetTimelineListAdapter
-                .Builder(getActivity())
-                .setTimeline(noticias)
-                .build();
+        try {
+            final SwipeRefreshLayout swipeL = (SwipeRefreshLayout) rootView
+                    .findViewById(R.id.twitter_refreshL);
+            // Codigo obtenido de la documentacion de Fabric
+            final UserTimeline noticias = new UserTimeline.Builder()
+                    .screenName("RedxGuate")
+                    .build();
+            final TweetTimelineListAdapter adapter = new TweetTimelineListAdapter
+                    .Builder(getActivity())
+                    .setTimeline(noticias)
+                    .build();
 
-        setListAdapter(adapter);
-        swipeL.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-                swipeL.setRefreshing(true);
-                adapter.refresh(new Callback<TimelineResult<Tweet>>() {
-                    @Override
-                    public void success(Result<TimelineResult<Tweet>> result) {
-                        swipeL.setRefreshing(false);
+            setListAdapter(adapter);
+            swipeL.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+                @Override
+                public void onRefresh() {
+                    swipeL.setRefreshing(true);
+                    adapter.refresh(new Callback<TimelineResult<Tweet>>() {
+                        @Override
+                        public void success(Result<TimelineResult<Tweet>> result) {
+                            swipeL.setRefreshing(false);
 
-                    }
+                        }
 
-                    @Override
-                    public void failure(TwitterException e) {
-                        Toast.makeText(getActivity(), R.string.errorcarga, Toast.LENGTH_SHORT)
-                                .show();
-                    }
-                });
-            }
-        });
+                        @Override
+                        public void failure(TwitterException e) {
+                            Toast.makeText(getActivity(), R.string.errorcarga, Toast.LENGTH_SHORT)
+                                    .show();
+                        }
+                    });
+                }
+            });
+        }catch (Exception ex){
+            Log.e(this.getClass().getSimpleName(), "TW ERROR", ex);
+        }
 
         return rootView;
 

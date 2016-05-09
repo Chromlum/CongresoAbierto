@@ -20,11 +20,42 @@
     <string name="comisiones_dialog" translatable="true">Elige tu comisión</string>
     <string name="acercaDe" translatable="true">Acerca de</string>
 
-
+    <string name="correo" translatable="true">Correo</string>
+    <string name="asistencia" translatable="true">Asistencia</string>
+    <string name="votacion" translatable="true">Votación</string>
     <string name="cargando" translatable="true">Cargando...</string>
     <string name="errorcarga" translatable="true">Error al obtener los datos</string>
 
+    <string name="llamar">Llamar</string>
 
+    <!-- Departamentos -->
+    <string-array name="departamentos" translatable="true">
+        <item>Alta Verapaz</item>
+        <item>Baja Verapaz</item>
+        <item>Chimaltenango</item>
+        <item>Chiquimula</item>
+        <item>Distrito Central</item>
+        <item>Distrito Guatemala</item>
+        <item>El Progreso</item>
+        <item>Escuintla</item>
+        <item>Huehuetenango</item>
+        <item>Izabal</item>
+        <item>Jalapa</item>
+        <item>Jutiapa</item>
+        <item>Petén</item>
+        <item>Quetzaltenango</item>
+        <item>Quiché</item>
+        <item>Retalhuleu</item>
+        <item>Sacatepéquez</item>
+        <item>San Marcos</item>
+        <item>Santa Rosa</item>
+        <item>Sololá</item>
+        <item>Suchitepéquez</item>
+        <item>Totonicapán</item>
+        <item>Zacapa</item>
+        <item>Listado Nacional</item>
+    </string-array>
+    <string name="para">Para:</string>
     <!-- Comisiones -->
 
     <string-array name="comisiones" translatable="true">

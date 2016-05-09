@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    android:paddingLeft="15dp"
+    android:paddingRight="15dp"
+    android:paddingBottom="10dp"
+    android:background="@color/blanco">
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonround"
+        android:text="@string/correo"
+        android:textColor="@color/blanco"
+        android:onClick="onClick"
+        android:textSize="20sp"
+        android:id="@+id/btnEnvCorreo"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonround"
+        android:layout_below="@+id/btnEnvCorreo"
+        android:layout_marginTop="20dp"
+        android:text="@string/asistencia"
+        android:textColor="@color/blanco"
+        android:onClick="onClick"
+        android:textSize="20sp"
+        android:id="@+id/btnAsistencia"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonround"
+        android:layout_below="@+id/btnAsistencia"
+        android:layout_marginTop="20dp"
+        android:text="@string/comisiones"
+        android:onClick="onClick"
+        android:textColor="@color/blanco"
+        android:textSize="20sp"
+        android:id="@+id/btnComi"/>
+    <!--<Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonround"
+        android:layout_below="@+id/btnComi"
+        android:layout_marginTop="20dp"
+        android:text="@string/votacion"
+        android:onClick="onClick"
+        android:textColor="@color/blanco"
+        android:textSize="20sp"
+        android:id="@+id/btnVotacion"/> -->
+</RelativeLayout>

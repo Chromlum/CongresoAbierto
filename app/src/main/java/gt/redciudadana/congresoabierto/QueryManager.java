@@ -27,18 +27,23 @@ public class QueryManager {
         }
     }
 
-    public ArrayList<JSONObject> buscarPorComision(String query){
-        ArrayList<JSONObject> personas = new ArrayList<>();
+    public ArrayList<String> buscarPorComision(String query){
+        ArrayList<String> personas = new ArrayList<>();
         try {
             for (JSONObject jsonObject : dataPersonas) {
-                if (jsonObject.getString("comision").equals(query)) {
-                    personas.add(jsonObject);
+                String comision = jsonObject.getString("comision");
+                String[] comisiones = comision.split(",");
+                for (int i = 0; i < comisiones.length; i++){
+                    if (comisiones[i].equals(query)) {
+                        personas.add(jsonObject.toString());
+                        break;
+                    }
                 }
             }
             return personas;
         }catch (JSONException ex){
             Log.e(QueryManager.class.getSimpleName(), "JSON ERROR", ex);
-            return null;
+            return personas;
         }
     }
 

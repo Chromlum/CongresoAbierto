@@ -1,13 +1,14 @@
 package gt.redciudadana.congresoabierto;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.view.View;
+
+import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import android.support.design.widget.NavigationView;
@@ -18,10 +19,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -47,7 +46,12 @@ public class Principal extends AppCompatActivity
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         toolbar.setLogo(R.drawable.topicon); */
 
+        DisplayImageOptions defaultOptions = new DisplayImageOptions.Builder()
+                .cacheInMemory(true)
+                .cacheOnDisk(true)
+                .build();
         ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(this)
+                .defaultDisplayImageOptions(defaultOptions)
                 .build();
         ImageLoader.getInstance().init(config);
 
@@ -101,6 +105,9 @@ public class Principal extends AppCompatActivity
             }else if(currentFragment instanceof FeedFragment){
                 textView.setText(R.string.feed);
                 setTitle(R.string.tuvoz);
+            }else if(currentFragment instanceof ComisionesFragment){
+                textView.setText(R.string.comisiones_dialog);
+                setTitle(R.string.comisiones);
             }
         }
     }
@@ -200,6 +207,7 @@ public class Principal extends AppCompatActivity
             textView.setText(R.string.feed);
         }else if (btnID == R.id.btnContacto){
             fragmentClass = EmailFragment.class;
+            bundle.putString("Correo", "info@redciudadana.org.gt");
             setTitle(R.string.contacto);
             textView.setText(R.string.contacto);
         }
